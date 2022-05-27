@@ -26,24 +26,52 @@ times = []
 
 # test 1
 a = []
-for i in range(1000):
-    a.append(random.randint(1, 1000))
+for i in range(30000):
+    a.append(random.randint(1, 30000))
 time1 = time.time()
 Quick_sort(a)
 times.append(time.time() - time1)
 
 # test 2
 a = []
-for i in range(10000):
-    a.append(random.randint(1, 10000))
+for i in range(60000):
+    a.append(random.randint(1, 60000))
 time1 = time.time()
 Quick_sort(a)
 times.append(time.time() - time1)
 
 # test 3
 a = []
-for i in range(100000):
-    a.append(random.randint(1, 100000))
+for i in range(90000):
+    a.append(random.randint(1, 90000))
+time1 = time.time()
+Quick_sort(a)
+times.append(time.time() - time1)
+
+
+# test 4
+a = []
+for i in range(120000):
+    a.append(random.randint(1, 120000))
+time1 = time.time()
+Quick_sort(a)
+times.append(time.time() - time1)
+
+
+# test 5
+a = []
+for i in range(150000):
+    a.append(random.randint(1, 150000))
+time1 = time.time()
+Quick_sort(a)
+times.append(time.time() - time1)
+
+
+
+# test 6
+a = []
+for i in range(180000):
+    a.append(random.randint(1, 180000))
 time1 = time.time()
 Quick_sort(a)
 times.append(time.time() - time1)
@@ -51,6 +79,6 @@ times.append(time.time() - time1)
 print(times)
 
 plt.xlabel('Количество чисел')
-plt.ylabel('Время сортировки')
-plt.plot([1000, 10000, 100000], times)
+plt.ylabel('Время сортировки (в секундах )')
+plt.plot([30000, 60000, 90000,120000,150000,180000], times,marker ='o')
 plt.show()
